@@ -1,0 +1,128 @@
+.openingSection {
+  padding-block: clamp(1.4rem, 3vh, 2.5rem) clamp(2rem, 4vh, 3.25rem);
+  border-block-end: 1.5px solid var(--ink-primary);
+}
+
+.frontispieceHeader {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: end;
+  padding-block-end: 1.35rem;
+  margin-block-end: 1.35rem;
+  border-block-end: 1px solid var(--rule-strong);
+}
+
+.displayHeadline {
+  font-size: var(--text-display);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  max-inline-size: 18ch;
+}
+
+.introStatement {
+  font-size: var(--text-body-lg);
+  color: var(--ink-secondary);
+  line-height: 1.55;
+  max-inline-size: 56ch;
+}
+
+.datasetLedger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--paper-vellum);
+  border: 1px solid var(--rule-strong);
+}
+
+.ledgerMetricValue {
+  display: block;
+  font-family: var(--font-editorial);
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-primary);
+}
+
+.sectionBlock {
+  padding-block: var(--space-7);
+  border-block-end: 1px solid var(--rule-strong);
+}
+
+/* Asymmetrical Investigated Places Layout (Not identical 3-col cards!) */
+.placesEditorialGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-block-start: 1.5rem;
+}
+
+.leadPlaceSheet {
+  background: var(--paper-chalk);
+  border: 1px solid var(--ink-primary);
+  padding: 1.6rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.indexLedgerColumn {
+  display: grid;
+  gap: 0;
+  border-block-start: 1.5px solid var(--ink-primary);
+}
+
+.indexLedgerRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding-block: 1rem;
+  border-block-end: 1px solid var(--rule-fine);
+  text-decoration: none;
+}
+
+.indexLedgerRow:hover {
+  background: var(--paper-chalk);
+  padding-inline: 0.5rem;
+}
+
+/* Editorial Feature Spread */
+.essaySpread {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background: var(--paper-chalk);
+  border: 1px solid var(--rule-strong);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+/* Unresolved Questions Two-Column Inquest */
+.questionsLedger {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-block-start: 1.5rem;
+}
+
+@media (min-width: 920px) {
+  .frontispieceHeader {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .placesEditorialGrid {
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 2.25rem;
+  }
+
+  .essaySpread {
+    grid-template-columns: 1.05fr 1.15fr;
+    align-items: start;
+  }
+
+  .questionsLedger {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

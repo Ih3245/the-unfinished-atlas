@@ -1,0 +1,93 @@
+.headerBand {
+  padding-block: 1.75rem 1.25rem;
+  border-block-end: 1.5px solid var(--ink-primary);
+}
+
+.filterToolbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  padding-block: 1.1rem;
+  border-block-end: 1px solid var(--rule-strong);
+}
+
+.mobileModeSwitch {
+  display: flex;
+  gap: 0.5rem;
+  margin-block-start: 1rem;
+}
+
+.workspaceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  align-items: start;
+}
+
+.mapSheet {
+  background: var(--paper-chalk);
+  border: 1px solid var(--rule-strong);
+  padding: 0.9rem;
+}
+
+.gazetteerList {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.gazetteerItem {
+  width: 100%;
+  text-align: start;
+  padding: 0.85rem 1rem;
+  background: var(--paper-chalk);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sharp);
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--ink-primary);
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.gazetteerItem:hover {
+  background: var(--paper-vellum);
+}
+
+.gazetteerItemSelected {
+  border: 2px solid var(--accent-terracotta);
+  background: var(--paper-vellum);
+}
+
+.inspectorPanel {
+  background: var(--paper-chalk);
+  border: 1px solid var(--ink-primary);
+  padding: 1.35rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hiddenOnMobileMode {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .filterToolbar {
+    grid-template-columns: 1.5fr repeat(3, 1fr) auto;
+    align-items: end;
+  }
+}
+
+@media (min-width: 1060px) {
+  .mobileModeSwitch {
+    display: none;
+  }
+
+  .hiddenOnMobileMode {
+    display: block;
+  }
+
+  .workspaceGrid {
+    grid-template-columns: 19rem minmax(0, 1.35fr) 22rem;
+    gap: 1.25rem;
+  }
+}

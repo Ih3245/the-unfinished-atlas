@@ -1,0 +1,232 @@
+.masthead {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 50;
+  background-color: var(--paper-warm);
+  border-block-end: 1.5px solid var(--ink-primary);
+}
+
+.topLedger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 0.35rem;
+  border-block-end: 1px solid var(--rule-fine);
+}
+
+.topLedgerRight {
+  display: none;
+}
+
+.mainBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.65rem;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.brandCompass {
+  color: var(--accent-terracotta);
+  flex-shrink: 0;
+}
+
+.brandTitle {
+  display: block;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.15rem, 1.4vw + 0.7rem, 1.45rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink-primary);
+}
+
+.brandSub {
+  display: block;
+  font-family: var(--font-catalogue);
+  font-size: 0.7rem;
+  color: var(--ink-secondary);
+}
+
+.desktopNav {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0.45rem 0.72rem;
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radius-sharp);
+  border-block-end: 2px solid transparent;
+}
+
+.navLink:hover {
+  background-color: var(--paper-vellum);
+  color: var(--ink-primary);
+}
+
+.navLinkActive {
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  border-block-end-color: var(--accent-terracotta);
+  background-color: var(--paper-chalk);
+}
+
+.navRoman {
+  font-family: var(--font-catalogue);
+  font-size: 0.72rem;
+  color: var(--ink-secondary);
+}
+
+.deskCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.3rem;
+  height: 1.3rem;
+  padding-inline: 0.3rem;
+  font-family: var(--font-catalogue);
+  font-size: 0.7rem;
+  font-weight: 700;
+  background-color: var(--accent-terracotta);
+  color: var(--paper-chalk);
+  border-radius: var(--radius-sharp);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.searchTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.45rem 0.75rem;
+  background-color: var(--paper-chalk);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sharp);
+  color: var(--ink-primary);
+  font-family: var(--font-interface);
+  font-size: var(--text-body-sm);
+  cursor: pointer;
+}
+
+.searchTrigger:hover {
+  border-color: var(--ink-primary);
+  background-color: var(--paper-vellum);
+}
+
+.searchTriggerLabel {
+  display: none;
+}
+
+.kbdHint {
+  display: none;
+  font-family: var(--font-catalogue);
+  font-size: 0.72rem;
+  padding: 0.08rem 0.36rem;
+  background: var(--paper-vellum);
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+}
+
+.mobileMenuBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  background: var(--paper-chalk);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sharp);
+  color: var(--ink-primary);
+  cursor: pointer;
+}
+
+.mobileDialog {
+  max-width: min(24rem, calc(100% - 1.5rem));
+}
+
+.mobileDrawerInner {
+  padding: 1.25rem;
+}
+
+.mobileDrawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-block-end: 0.85rem;
+  margin-block-end: 0.85rem;
+  border-block-end: 1px solid var(--rule-fine);
+}
+
+.mobileNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.mobileNavItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 46px;
+  padding: 0.6rem 0.75rem;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid var(--rule-fine);
+  background: var(--paper-warm);
+  border-radius: var(--radius-sharp);
+}
+
+.mobileNavItemActive {
+  border-color: var(--accent-terracotta);
+  background: var(--terracotta-tint);
+  color: var(--accent-terracotta);
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .searchTriggerLabel,
+  .kbdHint,
+  .topLedgerRight {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1040px) {
+  .desktopNav {
+    display: block;
+  }
+  .mobileMenuBtn {
+    display: none;
+  }
+}

@@ -1,0 +1,80 @@
+:root {
+  /* 60% Dominant — Warm Archival Rag Paper */
+  --paper-warm: #F5F1E8;
+  /* 30% Secondary — Chalk Folio Leaf & Recessed Vellum */
+  --paper-chalk: #FFFCF5;
+  --paper-vellum: #EAE3D3;
+  --paper-sunken: #E2DAC8;
+
+  /* Ink Hierarchy (Computed WCAG 2.2 AA: 13.13:1 & 6.94:1 on #F5F1E8) */
+  --ink-primary: #292820;
+  --ink-secondary: #54524A;
+
+  /* 10% Accent — Oxidized Terracotta (6.49:1 text / 7.13:1 chalk-on-button) */
+  --accent-terracotta: #8E3E2A;
+  --accent-terracotta-hover: #753120;
+  --accent-terracotta-active: #5E2618;
+  --accent-terracotta-mark: #A6503A;
+  --terracotta-tint: #F5E5DF;
+
+  /* Cartographic & Epistemic Strata (All text tokens >= 6.30:1 on #F5F1E8) */
+  --olive-text: #4B4E38;
+  --olive-mark: #6B6E52;
+  --olive-tint: #E9EBDF;
+
+  --ochre-text: #7A4F13;
+  --ochre-mark: #9B6A23;
+  --ochre-tint: #F4EAD8;
+
+  --water-fill: #D5DFDF;
+  --water-stroke: #566D70;
+
+  /* Non-text Archival Rules & Map Graticules */
+  --rule-fine: #D8D0C2;
+  --rule-strong: #B8AF9E;
+  --pencil-graticule: #89877F;
+
+  /* Hue-tinted warm paper shadows (never raw black) */
+  --shadow-sheet: 0 2px 8px rgba(41, 40, 32, 0.05), 0 1px 2px rgba(41, 40, 32, 0.06);
+  --shadow-elevated: 0 14px 34px rgba(41, 40, 32, 0.12), 0 2px 6px rgba(41, 40, 32, 0.08);
+
+  /* Typography Families */
+  --font-editorial: var(--font-newsreader), 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-interface: var(--font-jakarta), 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-catalogue: var(--font-plex-mono), 'Cascadia Mono', 'Consolas', ui-monospace, monospace;
+
+  /* Named Fluid Type Scale */
+  --text-display: clamp(2.25rem, 4.1vw + 0.8rem, 4.15rem);
+  --text-h1: clamp(1.9rem, 2.8vw + 0.85rem, 3.1rem);
+  --text-h2: clamp(1.45rem, 1.6vw + 0.85rem, 2.15rem);
+  --text-h3: clamp(1.175rem, 0.75vw + 0.9rem, 1.45rem);
+  --text-body-lg: clamp(1.0625rem, 0.35vw + 0.98rem, 1.2rem);
+  --text-body: 1rem; /* 16px floor */
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.78125rem;
+  --text-button: 0.875rem;
+
+  /* Deliberate Corner Radius Scale (crisp folio corners, zero bubbly SaaS pills) */
+  --radius-sharp: 2px;
+  --radius-folio: 4px;
+
+  /* Spacing Rhythm */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.25rem;
+
+  /* Layout Containers */
+  --container-max: 82rem; /* 1312px */
+  --measure-reading: 66ch;
+
+  /* Restrained Motion */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 240ms;
+}
